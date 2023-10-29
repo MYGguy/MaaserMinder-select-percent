@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="total">$</h1>
+  <input id="amount" type="text"></input>
+  <div id="mainPanel">
+  	<div id="leftPanel">
+      <button class="plusMinusButton" id="minus" onclick="addToHistory(minusHistoryNumbers, minusHistoryTable, 'minus')">-</button>
+  	</div>
+  <div id="keypad">
+      <table>
+          <tbody>
+      <tr>
+          <td id="button1" class="key" data-value="1">1</td>
+          <td id="button2" class="key" data-value="2">2</td>
+          <td id="button3" class="key" data-value="3">3</td>
+      </tr>
+      <tr>
+          <td id="button4" class="key" data-value="4">4</td>
+          <td id="button5" class="key" data-value="5">5</td>
+          <td id="button6" class="key" data-value="6">6</td>
+      </tr>
+      <tr>
+          <td id="button7" class="key" data-value="7">7</td>
+          <td id="button8" class="key" data-value="8">8</td>
+          <td id="button9" class="key" data-value="9">9</td>
+      </tr>
+      <tr>
+          <td id="button0" class="key" data-value="0">0</td>
+          <td id="buttonDot" class="key" data-value=".">.</td>
+           <td id="buttonDelete" class="delete" data-value="delete">←</td>
+      </tr>
+          </tbody>
+      </table>
+  </div>
+  <div id="rightPanel">
+    <button class="plusMinusButton" id="plus" onclick="addToHistory(plusHistoryNumbers, plusHistoryTable, 'plus')">+</button>
+    <div id="percentages">
+    	<button id="percentagesButton" onclick="percentagesFunction()">%</button>
+    </div>
+  </div>
+    </div>
+  <button id="restoreState" onclick="resetState()">Reset</button>
+  <div id="histories">
+      <div id="minusHistoryTable"></div>
+      <div id="plusHistoryTable">
+      </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
